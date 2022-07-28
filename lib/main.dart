@@ -27,6 +27,12 @@ class muzik_calma extends StatelessWidget {
 class DrumPage extends StatelessWidget {
 
   final player = AudioCache();
+  void callVoice(String ses){
+    player.play('$ses.wav');
+
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,7 +45,7 @@ class DrumPage extends StatelessWidget {
                   child: FlatButton(
                       padding: EdgeInsets.all(8),
                       onPressed: (){
-                        player.play('bip.wav');
+                        callVoice('bip');
                       },
                       child: Container(color: Colors.blue,)),
                 ),
@@ -48,7 +54,7 @@ class DrumPage extends StatelessWidget {
                   child: FlatButton(
                     padding: EdgeInsets.all(8),
                       onPressed: (){
-                        player.play('bongo.wav');
+                        callVoice('bongo');
                       },
                       child: Container(color: Colors.redAccent,)),
                 ),
@@ -61,7 +67,7 @@ class DrumPage extends StatelessWidget {
                child: FlatButton(
                    padding: EdgeInsets.all(8),
                    onPressed: (){
-                     player.play('clap1.wav');
+                     callVoice('clap1');
                    },
                    child: Container(color: Colors.yellow,)),
              ),
@@ -70,7 +76,7 @@ class DrumPage extends StatelessWidget {
                child: FlatButton(
                    padding: EdgeInsets.all(8),
                    onPressed: (){
-                     player.play('clap2.wav');
+                     callVoice('clap2');
                    },
                    child: Container(color: Colors.green,)),
              ),
@@ -82,7 +88,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('clap3.wav');
+                      callVoice('clap3');
                     },
                     child: Container(color: Colors.brown,)),
               ),
@@ -91,7 +97,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('crash.wav');
+                      callVoice('crash');
                     },
                     child: Container(color: Colors.blueGrey,)),
               ),
@@ -104,7 +110,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('how.wav');
+                      callVoice('how');
                     },
                     child: Container(color: Colors.lightGreenAccent,)),
               ),
@@ -113,7 +119,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('oobah.wav');
+                      callVoice('oobah');
                     },
                     child: Container(color: Colors.red,)),
               ),
@@ -126,7 +132,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('ridebel.wav');
+                      callVoice('ridebel');
                     },
                     child: Container(color: Colors.amber,)),
               ),
@@ -135,7 +141,7 @@ class DrumPage extends StatelessWidget {
                 child: FlatButton(
                     padding: EdgeInsets.all(8),
                     onPressed: (){
-                      player.play('woo.wav');
+                      callVoice('woo');
                     },
                     child: Container(color: Colors.cyan,)),
               ),
