@@ -42,21 +42,11 @@ class DrumPage extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: FlatButton(
-                      padding: EdgeInsets.all(8),
-                      onPressed: (){
-                        callVoice('bip');
-                      },
-                      child: Container(color: Colors.blue,)),
+                  child: buildDrumPad('bip',Colors.blueAccent), //burada refaktor kullandik flatbutton yerine
                 ),
 
                 Expanded(
-                  child: FlatButton(
-                    padding: EdgeInsets.all(8),
-                      onPressed: (){
-                        callVoice('bongo');
-                      },
-                      child: Container(color: Colors.redAccent,)),
+                  child: buildDrumPad('bongo',Colors.redAccent), //buradada flatbutton yerine refaktor kullandik asagidakilerde kullanmadim
                 ),
               ],
             ),
@@ -151,5 +141,14 @@ class DrumPage extends StatelessWidget {
         ],
       ),
     ) ;
+  }
+
+  FlatButton buildDrumPad(String ses,Color color) {
+    return FlatButton(
+                    padding: EdgeInsets.all(8),
+                    onPressed: (){
+                      callVoice(ses);
+                    },
+                    child: Container(color: color,));
   }
 }
